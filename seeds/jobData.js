@@ -4,6 +4,7 @@ const jobData =
 [
   {
     "job_title": "Front End Developer",
+    "job_company": "Google",
     "job_description": "Come work for Google as a Front End Developer!",
     "job_salary": 50000,
     "job_technologies": "Javascript, CSS",
@@ -12,6 +13,7 @@ const jobData =
   },
   {
     "job_title": "Back End Developer",
+    "job_company": "Youtube",
     "job_description": "Come work for Youtube as a Back End Developer!",
     "job_salary": 60000,
     "job_technologies": "SQL, Node",
@@ -20,6 +22,7 @@ const jobData =
   },
   {
     "job_title": "Fullstack Developer",
+    "job_company": "Twitter",
     "job_description": "Come work for Twitter as a Fullstack Developer!",
     "job_salary": 70000,
     "job_technologies": "SQL, Node, Javascript, CSS",

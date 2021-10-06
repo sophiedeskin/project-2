@@ -15,6 +15,10 @@ Job.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    job_company: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     job_description: {
       type: DataTypes.STRING,
       allowNull: false,
