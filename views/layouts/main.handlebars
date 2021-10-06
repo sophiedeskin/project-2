@@ -7,6 +7,7 @@
   <title>Coding Project</title>
   <link rel="stylesheet" href="/css/jass.css">
   <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/public/css/style.css">
   <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
@@ -15,29 +16,24 @@
 
 <body>
     {{!-- Start of Nav Bar --}}
-      <nav>
-          <div class="navbar-menu is-dark">
-              <div class="navbar-start">
+<div class="bg-img">
+    <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+          <div class="navbar-menu ">
+              <div class="navbar-start is-dark">
       <div class="navbar-item">
   <div class="field is-grouped">
-    <p class="control">
-      <a class="button">
-        <span>Sign Up</span>
-      </a>
-    </p>
+  <div class="button">Sign Up</div>
   </div>
 </div>
 </div>
     </div>
-    {{!-- End Nav Bar --}}
       </nav>
-      <div class="columns">
-<div class="field">
-      <div class="column">
-  </div>
-  <div class="column">
-  </div>
-  <div class="column">
+    {{!-- End Nav Bar --}}
+<div class="columns is-centered mt-6">
+    <div class="column is-one-third">
+        <h1 class="title is-1 is-centered mb-6"  id="app-name">Coding Jobs</h1>
+        <div class="column">
+            <div class="field">
   <p class="control has-icons-left has-icons-right">
     <input class="input" type="email" placeholder="Email">
     <span class="icon is-small is-left">
@@ -47,7 +43,6 @@
       <i class="fas fa-check"></i>
     </span>
   </p>
-  
 </div>
 <div class="field">
   <p class="control has-icons-left">
@@ -56,9 +51,11 @@
       <i class="fas fa-lock"></i>
     </span>
   </p>
-  </div>
 </div>
-  </div>
+<div class="button is-dark">Log In</div>
+        </div>
+    </div>
+</div>
   </div>
 </body>
 </html>
