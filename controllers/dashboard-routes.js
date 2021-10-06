@@ -14,7 +14,7 @@ router.get("/", async (req, res) => {
         {
           model: User,
           //   attributes: ['filename', 'description'],
-          attributes: ["username"],
+          attributes: ["email"],
         },
       ],
     });
