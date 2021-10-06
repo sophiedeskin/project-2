@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { User , Job } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-router.get('/', async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
   // find all categories
   // be sure to include its associated Products
   try {
@@ -16,7 +16,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/:id', async (req, res) => {
+router.get('/:id', withAuth, async (req, res) => {
   // find one category by its `id` value
   // be sure to include its associated Products
   try {
@@ -38,7 +38,7 @@ router.get('/:id', async (req, res) => {
 
 
 // CREATE new job
-router.post('/', async (req, res) => {
+router.post('/', withAuth, async (req, res) => {
   try {
     const dbJobData = await Job.create({
         job_title: req.body.job_title,

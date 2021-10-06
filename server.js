@@ -7,10 +7,9 @@ const exphbs = require('express-handlebars');
 
 const routes = require('./controllers');
 const sequelize = require('./config/connection');
-const helpers = require('./utils/auth');
 const app = express();
 const PORT = process.env.PORT || 3001;
-
+const helpers = ('./utils/auth')
 // Set up Handlebars.js engine with custom helpers, may need to go back and update
 const hbs = exphbs.create({ helpers });
 
