@@ -1,5 +1,16 @@
-<div class="columns is-centered mt-6">
-    <div class="column is-one-third">
-        {{add-job}}
-        </div>
+{{#each jobs as |job| }}
+<div class="row mb-4 project">
+  <div class="col-md-5">
+    <h2>
+      <!-- Call helper function with triple brackets to render the emoji span as HTML -->
+      <a href="/one-job/{{job.job_title}}">{{job.job_description}}</a>
+    </h2>
+    <p>Created by {{job.job_contact}}</p>
+  </div>
+  <div class="col-md-7">
+    <p>
+      {{job.job_description}}
+    </p>
+  </div>
 </div>
+{{/each}}
