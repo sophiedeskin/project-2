@@ -1,0 +1,13 @@
+.bg-img {
+    background-image: url(
+"https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cHJvZ3JhbW1lcnxlbnwwfHwwfHw=&ixlib=rb-1.2.1&w=1000&q=80");
+    height: 1000px;
+    width: auto;
+    background-size: cover;
+}
+
+#titles {
+    color: white;
+    margin-left: 125px;
+    font-family: 'Anton', sans-serif;
+}
