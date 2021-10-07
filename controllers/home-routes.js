@@ -14,7 +14,7 @@ router.get('/signup', (req, res) => {
     res.redirect('dashboard');
     return;
   }
-  res.render('signup');
+  res.render('homepage');
 });
 
 router.get('/create', (req, res) => {

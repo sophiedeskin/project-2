@@ -6,14 +6,13 @@ const withAuth = require("../utils/auth");
 router.get("/", async (req, res) => {
   try {
     const dbJobData = await Job.findAll({
-      where: {
-        // use the ID from the session
-        user_id: req.session.user_id,
-      },
+      // where: {
+      //   // use the ID from the session
+      //   user_id: req.session.user_id,
+      // },
       include: [
         {
           model: User,
-          //   attributes: ['filename', 'description'],
           attributes: ["email"],
         },
       ],
@@ -23,7 +22,7 @@ router.get("/", async (req, res) => {
 
     res.render("dashboard", {
       jobs,
-      loggedIn: req.session.loggedIn,
+      logged_in: req.session.logged_in,
     });
   } catch (err) {
     console.log(err);
