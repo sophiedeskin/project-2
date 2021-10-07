@@ -18,7 +18,7 @@ router.get('/signup', (req, res) => {
   res.render('signup');
 });
 
-router.get('/addjob', async (req, res) => {
+router.get('/addjob', withAuth, async (req, res) => {
   res.render('addjob', {
     layout: 'dashboard',
   });
@@ -46,7 +46,7 @@ router.get('/addjob', async (req, res) => {
 // });
 
 
-router.get('/dashboard', (req, res) => {
+router.get('/dashboard', withAuth, (req, res) => {
   Job.findAll({
     include: [
       {
