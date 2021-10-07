@@ -33,10 +33,9 @@ router.post('/addjob', async (req, res) => {
         job_technologies: req.body.job_technologies,
         job_contact: req.body.job_contact,
     });
-
     req.session.save(() => {
       req.session.logged_in = true;
-      res.status(200).json(dbJobData);
+      res.status(200).json(dbUserData);
     });
   } catch (err) {
     console.log(err);
@@ -69,16 +68,38 @@ router.get('/dashboard', (req, res) => {
   // res.render('homepage');
 });
 
-
-router.get('/search', (req, res) => {
-  let { term } = req.query;
-
-  // Make lowercase
-  term = term.toLowerCase();
-
-  Job.findAll({ where: { title: { [Op.like]: '%' + term + '%' } } })
-    .then(jobs => res.render('searchresults', { jobs }))
-    .catch(err => res.render('error', {error: err}));
+router.get('/myjobspage', async (req, res) => {
+  Job.findAll({
+    where: {
+      user_id: req.session.user_id
+    },
+    include: [
+      {
+        model: User,
+      }
+    ]
+  })
+    .then(dbJobData => {
+      // serialize data before passing to template
+      const jobs = dbJobData.map(job => job.get({ plain: true }));
+      res.render('myjobspage', { jobs, logged_in: req.session.logged_in });
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+  });
 });
+
+
+// router.get('/search', (req, res) => {
+//   let { term } = req.query;
+
+//   // Make lowercase
+//   term = term.toLowerCase();
+
+//   Job.findAll({ where: { title: { [Op.like]: '%' + term + '%' } } })
+//     .then(jobs => res.render('searchresults', { jobs }))
+//     .catch(err => res.render('error', {error: err}));
+// });
 
 module.exports = router;

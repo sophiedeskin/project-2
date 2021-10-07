@@ -47,6 +47,7 @@ router.post('/', async (req, res) => {
         job_salary: req.body.job_salary,
         job_technologies: req.body.job_technologies,
         job_contact: req.body.job_contact,
+        // user_id: req.body.user_id
     });
 
     req.session.save(() => {
