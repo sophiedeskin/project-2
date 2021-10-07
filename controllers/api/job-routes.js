@@ -38,7 +38,7 @@ router.get('/:id', async (req, res) => {
 
 
 // CREATE new job
-router.post('/', withAuth, async (req, res) => {
+router.post('/', async (req, res) => {
   try {
     const dbJobData = await Job.create({
         job_title: req.body.job_title,
