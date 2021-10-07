@@ -17,12 +17,43 @@ router.get('/signup', (req, res) => {
   res.render('signup');
 });
 
-router.get('/create', (req, res) => {
-  if (req.session.logged_in) {
-    res.redirect('/add-job');
+router.get('/addjob', async (req, res) => {
+  res.render('addjob', {
+    layout: 'main',
+  });
+});
+
+router.post('/addjob', async (req, res) => {
+try {
+  const dbJobData = await Job.findOne({
+    where: {
+      job_title: req.body.job_title,
+      job_company: req.body.job_company,
+      job_description: req.body.job_description,
+      job_salary: req.body.job_salary,
+      job_technologies: req.body.job_technologies,
+      job_contact: req.body.job_contact,
+    },
+  });
+
+  if (!dbJobData) {
+    res
+      .status(400)
+      .json({ message: 'Please enter all fields!' });
     return;
   }
-  res.render('homepage');
+
+  req.session.save(() => {
+    req.session.user_id = dbJobData.id;
+    req.session.logged_in = true;
+    res
+      .status(200)
+      .json({ post: dbJobData, message: 'You are now logged in!' });
+  });
+} catch (err) {
+  console.log(err);
+  res.status(500).json(err);
+}
 });
 
 router.get('/dashboard', (req, res) => {
