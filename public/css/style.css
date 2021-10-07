@@ -14,3 +14,10 @@
     margin-left: 125px;
     font-family: 'Anton', sans-serif;
 }
+
+body {
+    overflow: hidden; /* Hide scrollbars */
+  }
+  ul, li {
+    list-style-type: none;
+  }
