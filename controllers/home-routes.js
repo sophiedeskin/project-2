@@ -25,15 +25,9 @@ router.get('/addjob', async (req, res) => {
 
 router.post('/addjob', async (req, res) => {
 try {
-  const dbJobData = await Job.findOne({
-    where: {
-      job_title: req.body.job_title,
-      job_company: req.body.job_company,
-      job_description: req.body.job_description,
-      job_salary: req.body.job_salary,
-      job_technologies: req.body.job_technologies,
-      job_contact: req.body.job_contact,
-    },
+  const dbJobData = await Job.create({
+    ...req.body,
+    user_id: req.session.user_id,
   });
 
   if (!dbJobData) {
