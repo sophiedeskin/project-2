@@ -33,10 +33,10 @@ router.post('/addjob', async (req, res) => {
         job_technologies: req.body.job_technologies,
         job_contact: req.body.job_contact,
     });
-    req.session.save(() => {
-      req.session.logged_in = true;
+    // req.session.save(() => {
+    //   req.session.logged_in = true;
       res.status(200).json(dbUserData);
-    });
+    // });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);

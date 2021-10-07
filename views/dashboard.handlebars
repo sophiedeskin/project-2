@@ -1,4 +1,4 @@
-<h1>Jobs Page</h1>
+<h1 class="title is-1 is-centered mb-6"  id="titles">Find Jobs</h1>
 {{#each jobs as |job| }}
 <div class="columns is-centered mt-6">
     <div class="column is-one-third">
@@ -6,10 +6,17 @@
 <article class="message">
   <div class="message-header">
      <p><a href="/one-job/{{job.job_title}}">{{job.job_title}}</a></p>
-   <button class="delete" aria-label="delete"></button>
   </div>
   <div class="message-body">
    Job Description: {{job.job_description}}
+   <br>
+   Company: {{job.job_company}}
+   <br>
+   Technologies: {{job.job_technologies}}
+   <br>
+   Salary: {{job.job_salary}}
+   <br>
+   Contact Info: {{job.job_contact}}
   </div>
 </article>
   </div>

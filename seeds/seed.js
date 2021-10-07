@@ -16,7 +16,7 @@ const seedDatabase = async () => {
   for (const job of jobData) {
     await Job.create({
       ...job,
-      user_id: users[Math.floor(Math.random() * users.length)].id,
+      user_id: users.id,
     });
   }
 
