@@ -1,16 +1,25 @@
 {{#each jobs as |job| }}
-<div class="row mb-4 project">
-  <div class="col-md-5">
+<div class="columns is-centered mt-6">
+    <div class="column is-one-third">
     <h2>
-      <!-- Call helper function with triple brackets to render the emoji span as HTML -->
-      <a href="/one-job/{{job.job_title}}">{{job.job_description}}</a>
+<article class="message">
+  <div class="message-header">
+     <p><a href="/one-job/{{job.job_title}}">{{job.job_description}}</a></p>
+    <button class="add" aria-label="add"></button>
+  </div>
+  <div class="message-body">
     </h2>
     <p>Created by {{job.job_contact}}</p>
-  </div>
+ 
   <div class="col-md-7">
     <p>
       {{job.job_description}}
     </p>
   </div>
+
+</article>
+  </div>
 </div>
 {{/each}}
+ 
+    
