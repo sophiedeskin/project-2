@@ -1,4 +1,3 @@
-
 const path = require('path');
 const express = require('express');
 // Import express-session
@@ -12,8 +11,6 @@ const PORT = process.env.PORT || 3001;
 const helpers = ('./utils/auth')
 // Set up Handlebars.js engine with custom helpers, may need to go back and update
 const hbs = exphbs.create({ helpers });
-
-// const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 // Set up sessions, need to go back and update 
 const sess = {

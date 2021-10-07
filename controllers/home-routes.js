@@ -10,15 +10,15 @@ router.get('/', (req, res) => {
 // Login route
 router.get('/signup', (req, res) => {
   // If the user is already logged in, redirect to the dashboard
-  if (req.session.loggedIn) {
+  if (req.session.logged_in) {
     res.redirect('dashboard');
     return;
   }
-  res.render('homepage');
+  res.render('signup');
 });
 
 router.get('/create', (req, res) => {
-  if (req.session.loggedIn) {
+  if (req.session.logged_in) {
     res.redirect('/add-job');
     return;
   }
