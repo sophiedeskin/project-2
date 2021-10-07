@@ -5,6 +5,7 @@ const withAuth = require("../utils/auth");
 
 router.get("/", async (req, res) => {
   try {
+    console.log("dashboard-route")
     const dbJobData = await Job.findAll({
       where: {
         // use the ID from the session
@@ -18,9 +19,9 @@ router.get("/", async (req, res) => {
         },
       ],
     });
-
+console.log(dbJobData);
     const jobs = dbJobData.map((job) => job.get({ plain: true }));
-
+console.log(jobs);
     res.render("dashboard", {
       jobs,
       logged_in: req.session.logged_in,

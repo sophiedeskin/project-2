@@ -25,6 +25,8 @@ router.get('/create', (req, res) => {
   res.render('homepage');
 });
 
+
+
 router.get('/dashboard', (req, res) => {
   Job.findAll({
     include: [
