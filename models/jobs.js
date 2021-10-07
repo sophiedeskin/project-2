@@ -5,12 +5,6 @@ class Job extends Model {}
 
 Job.init(
   {
-    id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      primaryKey: true,
-      autoIncrement: true,
-    },
     job_title: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -34,22 +28,12 @@ Job.init(
     job_contact: {
         type: DataTypes.STRING,
         allowNull: false,
-      },
-    user_id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      defaultValue: 1,
-      references: {
-        model: "user",
-        key: "id",
-      },
-    },
+      }
+   
   },
   {
     sequelize,
-    freezeTableName: true,
-    underscored: true,
-    modelName: "job",
+
   }
 );
 

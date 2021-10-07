@@ -5,21 +5,20 @@
     <h2>
 <article class="message">
   <div class="message-header">
-     <p><a href="/one-job/{{job.job_title}}">{{job.job_title}}</a></p>
+    <ul><li><p>{{job.job_title}}</p></li>
+     <li><h1> {{job.job_company}}</h1></li>
+     </ul>
+   <button class="delete" aria-label="delete"></button>
   </div>
   <div class="message-body">
-
-    </h2>
-    <p>Created by {{job.job_contact}};
-      {{job.job_desription}};
-      {{job.job_company}};
-      {{job.job_technology}}
-    </p>
-   Job Description: {{job.job_description}}
+   <ul><li>Experience and Skills: {{job.job_technologies}}</li>
+   <li> Salary: ${{job.job_salary}}</li>
+   <li>Job Description: {{job.job_description}}</li></ul>
+  <li><a href="mailto:{{job.job_contact}}">Apply Here</a></li>
   </div>
-
 </article>
   </div>
 </div>
 {{/each}}
-    
+
+
