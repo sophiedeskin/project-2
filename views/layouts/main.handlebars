@@ -5,9 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Coding Project</title>
-  <link rel="stylesheet" href="/css/jass.css">
   <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="/public/css/style.css">
   <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
@@ -25,7 +23,7 @@
   {{#if logged_in}}
   <a class="button mr-3" href ="/myjobspage">My Jobs</a>
   <a class="button mr-3" href ="/add-job">Create a Job</a>
-  <a class="button mr-3" href ="/homepage">Logout</a>
+  <a class="button mr-3" id= "logout" href ="/">Logout</a>
   {{else}}
   <a class="button mr-3" href="/signup">Sign Up</a>
     {{/if}}

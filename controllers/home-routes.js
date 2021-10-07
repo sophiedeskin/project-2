@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
 // Login route
 router.get('/signup', (req, res) => {
   // If the user is already logged in, redirect to the dashboard
-  if (req.session.loggedIn) {
+  if (req.session.logged_in) {
     res.redirect('dashboard');
     return;
   }
@@ -18,7 +18,7 @@ router.get('/signup', (req, res) => {
 });
 
 router.get('/create', (req, res) => {
-  if (req.session.loggedIn) {
+  if (req.session.logged_in) {
     res.redirect('/add-job');
     return;
   }

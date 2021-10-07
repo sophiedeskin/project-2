@@ -23,7 +23,7 @@ router.get("/", async (req, res) => {
 
     res.render("dashboard", {
       jobs,
-      loggedIn: req.session.loggedIn,
+      logged_in: req.session.logged_in,
     });
   } catch (err) {
     console.log(err);

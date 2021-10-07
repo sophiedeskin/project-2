@@ -42,6 +42,7 @@ router.post('/', withAuth, async (req, res) => {
   try {
     const dbJobData = await Job.create({
         job_title: req.body.job_title,
+        job_company: req.body.job_company,
         job_description: req.body.job_description,
         job_salary: req.body.job_salary,
         job_technologies: req.body.job_technologies,
@@ -49,7 +50,7 @@ router.post('/', withAuth, async (req, res) => {
     });
 
     req.session.save(() => {
-      req.session.loggedIn = true;
+      req.session.logged_in = true;
       res.status(200).json(dbJobData);
     });
   } catch (err) {
