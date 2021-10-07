@@ -37,7 +37,7 @@ Job.init(
       },
     user_id: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      defaultValue: 1,
       references: {
         model: "user",
         key: "id",
