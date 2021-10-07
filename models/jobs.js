@@ -40,7 +40,7 @@ Job.init(
       allowNull: false,
       defaultValue: 1,
       references: {
-        model: "user",
+        model: "users",
         key: "id",
       },
     },
