@@ -11,10 +11,54 @@
 
 #titles {
     color: white;
-    margin-left: 125px;
     font-family: 'Anton', sans-serif;
+    background-color: darkslateblue;
+    width: fit-content;
+    padding: 15px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
 }
 
+#find-jobs-titles {
+    color: white;
+    font-family: 'Anton', sans-serif;
+    background-color: darkslateblue;
+    width: fit-content;
+    padding: 15px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 15px
+}
+#list-job-titles
+{
+    color: white;
+    font-family: 'Anton', sans-serif;
+    background-color: darkslateblue;
+    width: fit-content;
+    padding: 15px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: 25px
+}
+
+#main-titles
+{
+    color: white;
+    font-family: 'Anton', sans-serif;
+    background-color: darkslateblue;
+    width: fit-content;
+    padding: 15px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: 45px
+}
 body {
     overflow: hidden; /* Hide scrollbars */
   }

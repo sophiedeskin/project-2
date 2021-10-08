@@ -24,6 +24,28 @@ res.render('addjob', {
 });
 });
 
+router.get('/editjob', async (req, res) => {
+  // try {
+  //   const dbJobData = await Job.findOne({
+  //     where: {
+  //       // use the ID from the session
+  //       // id: req.params.id,
+  //       user_id: req.session.user_id,
+  //     },
+  //   });
+  //   const jobs = dbJobData.map((job) => job.get({ plain: true }));
+    res.render('editjob', {
+      layout: 'myjobspage'
+    });
+  // } catch (err) {
+  //   console.log(err);
+  //   res.status(500).json(err);
+  // }
+  // res.render('editjob', {
+  //   layout: 'myjobspage',
+  // });
+  });
+
 // router.post('/addjob', async (req, res) => {
 //   try {
 //     const dbJobData = await Job.create({
@@ -57,7 +79,6 @@ Job.findAll({
   .then(dbJobData => {
     // serialize data before passing to template
     const jobs = dbJobData.map(job => job.get({ plain: true }));
-    console.log(jobs);
     res.render('dashboard', { jobs, logged_in: req.session.logged_in });
   })
   .catch(err => {

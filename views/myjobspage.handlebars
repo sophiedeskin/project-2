@@ -1,4 +1,4 @@
-<h1 class="title is-1 is-centered mb-6"  id="titles">Your Posted Jobs</h1>
+<h1 class="title is-1 is-centered"  id="find-jobs-titles">Your Posted Jobs</h1>
 {{#each jobs as |job| }}
 <div class="columns is-centered mt-6">
     <div class="column is-one-third">
@@ -14,7 +14,7 @@
    <ul><li>Experience and Skills: {{job.job_technologies}}</li>
    <li> Salary: ${{job.job_salary}}</li>
    <li>Job Description: {{job.job_description}}</li></ul>
-  <li><a href="mailto:{{job.job_contact}}">Apply Here</a></li>
+  <li><a href="/editjob">Edit Job</a></li>
   </div>
 </article>
   </div>
