@@ -29,7 +29,7 @@ router.get('/editjob', async (req, res) => {
         // user_id: req.session.user_id,
       },
     });
-    // const jobs = dbJobData.map((job) => job.get({ plain: true }));
+    const jobs = dbJobData.map((job) => job.get({ plain: true }));
     res.render('editjob', {
       layout: 'editjob'
     });
@@ -38,7 +38,7 @@ router.get('/editjob', async (req, res) => {
     res.status(500).json(err);
   }
   res.render('myjobspage', {
-    layout: 'myjobspage',
+    layout: 'myjobspage', jobs
   });
   });
 
