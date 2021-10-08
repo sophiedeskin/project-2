@@ -1,7 +1,7 @@
 # Project 2
 
 ## Description
-
+Coding Jobs is a site we have created to make it easier for the tech community to find and apply for jobs in thier field. It requires a login so that applicants can view job listings and buisnesses can post said listings, using bulma, handlebars, javascript, and some CSS we were able to bring this site to life.
 ## Table of Contents
 
 * [Technology](#technology)
