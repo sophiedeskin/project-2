@@ -20,25 +20,25 @@ res.render('addjob', {
 });
 
 router.get('/editjob', async (req, res) => {
-  try {
-    const dbJobData = await Job.findOne({
-      where: {
-        // use the ID from the session
-        // id: req.params.id,
-        id: req.params.id,
-        // user_id: req.session.user_id,
-      },
-    });
+  // try {
+  //   const dbJobData = await Job.findOne({
+  //     where: {
+  //       // use the ID from the session
+  //       // id: req.params.id,
+  //       id: req.params.id,
+  //       // user_id: req.session.user_id,
+  //     },
+  //   });
     // const jobs = dbJobData.map((job) => job.get({ plain: true }));
     res.render('editjob', {
       layout: 'editjob'
-    });
-  } catch (err) {
-    console.log(err);
-    res.status(500).json(err);
-  }
-  res.render('myjobspage', {
-    layout: 'myjobspage',
+  //   });
+  // } catch (err) {
+  //   console.log(err);
+  //   res.status(500).json(err);
+  // }
+  // res.render('myjobspage', {
+  //   layout: 'myjobspage',
   });
   });
 

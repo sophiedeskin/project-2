@@ -4,6 +4,7 @@ async function editFormHandler(event) {
     console.log(event.target)
     
     
+    
     const job_title = document.querySelector('input[name="job_title"]').value;
     const job_company = document.querySelector('input[name="job_company"]').value;
     const job_description = document.querySelector('input[name="job_description"]').value;
