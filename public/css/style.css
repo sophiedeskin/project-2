@@ -16,7 +16,7 @@ a:hover{
 #main-titles, #list-job-titles  {
     color: white;
     font-family: 'Anton', sans-serif;
-    padding-left: 90px;
+    padding-left: 150px;
     padding-top: 10px;
     padding-bottom: 10px;
 }
@@ -24,7 +24,7 @@ a:hover{
 #titles {
     color: white;
     font-family: 'Anton', sans-serif;
-    padding-left: 120px;
+    padding-left: 180px;
     padding-top: auto;
     padding-bottom: auto;
 }
@@ -47,7 +47,7 @@ a:hover{
     border-radius: 10px 10px;
 }
 
-#main-titles, #signUp, #newJob, #list-job-titles, #titles{
+#main-titles, #signUp, #newJob, #list-job-titles, #titles, #logIn{
     background-color: #363636;
     border-radius: 10px 10px;
 }
