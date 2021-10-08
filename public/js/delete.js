@@ -7,7 +7,7 @@ const deleteClickHandler = async function(event) {
       method: 'DELETE'
     });
   
-    document.location.replace('/dashboard');
+    document.location.replace('/myjobspage');
   };
 
   var cards = document.querySelectorAll('.delete');

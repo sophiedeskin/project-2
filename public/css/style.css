@@ -9,6 +9,10 @@
     filter: blur() grayscale(65%);
 }
 
+a:hover{
+    font-weight: bolder;
+}
+
 #main-titles, #list-job-titles  {
     color: white;
     font-family: 'Anton', sans-serif;
