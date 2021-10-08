@@ -1,0 +1,27 @@
+<div class="columns is-centered mt-6">
+    <div class="column is-one-third ">
+      <p class="title is-1 is-centered mb-6" class="bd-notification is-primary" id="titles">Find Jobs</p>
+      </div>
+      </div>
+{{#each jobs as |job| }}
+<div class="columns is-end mt-6">
+    <div class="column is-one-third">
+    
+<article class="message">
+  <div class="message-header">
+    <ul><li><p>{{job.job_title}}</p></li>
+     <li><h1> {{job.job_company}}</h1></li>
+     </ul>
+   <button class="delete" aria-label="delete" id={{job.id}}></button>
+  </div>
+  <div class="message-body">
+   <ul><li class="mb-3">Experience and Skills: {{job.job_technologies}}</li>
+   <li class="mb-3"> Salary: ${{job.job_salary}}</li>
+   <li class="mb-3">Job Description: {{job.job_description}}</li></ul>
+  <li><a href="/editjob">Edit Job</a></li>
+  </div>
+</article>
+  </div>
+</div>
+{{/each}}
+<script src="/js/delete.js"></script>

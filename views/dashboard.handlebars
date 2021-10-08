@@ -1,14 +1,19 @@
-<h1>Jobs Page</h1>
+<div class="columns is-centered mt-6">
+    <div class="column is-one-third" id="findJobsHeader">
+      <p class="title is-1 is-centered mb-4" class="bd-notification is-primary" id="titles">Find Jobs</p>
+      </div>
+      </div>
 {{#each jobs as |job| }}
 <div class="columns is-centered mt-6">
     <div class="column is-one-third">
-    <h2>
 <article class="message">
   <div class="message-header">
-     <p><a href="/one-job/{{job.job_title}}">{{job.job_title}}</a></p>
-   <button class="delete" aria-label="delete"></button>
+    <ul><li><p>{{job.job_title}}</p></li>
+     <li><h1> {{job.job_company}}</h1></li>
+     </ul>
   </div>
   <div class="message-body">
+<<<<<<< HEAD
     </h2>
     <p>Created by {{job.job_contact}};
       {{job.job_desription}};
@@ -16,9 +21,17 @@
       {{job.job_technology}}
     </p>
    Job Description: {{job.job_description}}
+=======
+   <ul><li>Experience and Skills: {{job.job_technologies}}</li>
+   <li> Salary: ${{job.job_salary}}</li>
+   <li>Job Description: {{job.job_description}}</li></ul>
+  <li><a href="mailto:{{job.job_contact}}">Apply Here</a></li>
+>>>>>>> 70b046779de9f387dcd6bed9ebae6e810412493d
   </div>
 </article>
   </div>
 </div>
 {{/each}}
-    
+
+
+

@@ -20,9 +20,7 @@ router.get('/:id', async (req, res) => {
   // find one category by its `id` value
   // be sure to include its associated Products
   try {
-    const dbJobData = await Job.findByPk(req.params.id, {
-      include: [{ model: User }],
-    });
+    const dbJobData = await Job.findByPk(req.params.id);
 
     if (!dbJobData) {
       res.status(404).json({ message: 'No job found with that id!' });
@@ -38,23 +36,53 @@ router.get('/:id', async (req, res) => {
 
 
 // CREATE new job
-router.post('/', async (req, res) => {
+router.post('/', withAuth,  async (req, res) => {
+  console.log(req.body)
   try {
-    const dbJobData = await Job.create({
-        job_title: req.body.job_title,
-        job_company: req.body.job_company,
-        job_description: req.body.job_description,
-        job_salary: req.body.job_salary,
-        job_technologies: req.body.job_technologies,
-        job_contact: req.body.job_contact,
-    });
 
-    req.session.save(() => {
-      req.session.logged_in = true;
-      res.status(200).json(dbJobData);
-    });
+    const newJob = await Job.create({...req.body, user_id: req.session.user_id})
+    res.json(newJob)
   } catch (err) {
     console.log(err);
+    res.status(500).json(err);
+  }
+});
+
+router.put("/:id", withAuth, async (req, res) => {
+  try {
+
+      const dbJobData = await Job.update(
+        {
+          ...req.body, user_id: req.session.user_id
+      }
+      )
+
+      if (!dbJobData[0]) {
+          res.status(404).json({ message: 'No job found with this id!' });
+          return;
+      }
+
+      res.status(200).json(dbJobData);
+  } catch (err) {
+      console.log(err)
+      res.status(500).json(err);
+  }
+})
+
+router.delete('/:id', withAuth, async (req, res) => {
+  try {
+    const [affectedRows] = Job.destroy({
+      where: {
+        id: req.params.id,
+      },
+    });
+
+    if (affectedRows > 0) {
+      res.status(200).end();
+    } else {
+      res.status(404).end();
+    }
+  } catch (err) {
     res.status(500).json(err);
   }
 });
