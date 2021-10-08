@@ -7,11 +7,12 @@ const addjobFormHandler = async (event) => {
     const job_salary = document.querySelector('#salary').value.trim();
     const job_technologies = document.querySelector('#technology').value.trim();
     const job_contact = document.querySelector('#contact').value.trim();
+    const date_created = document.querySelector('#date').value.trim();
   
   
       const response = await fetch('/api/jobs', {
         method: 'POST',
-        body: JSON.stringify({ job_title, job_company, job_description, job_salary, job_technologies, job_contact }),
+        body: JSON.stringify({ job_title, job_company, job_description, job_salary, job_technologies, job_contact, date_created }),
         headers: { 'Content-Type': 'application/json' },
       });
   

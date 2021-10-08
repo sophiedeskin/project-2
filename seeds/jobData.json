@@ -5,7 +5,8 @@
     "job_description": "Come work for Google as a Front End Developer!",
     "job_salary": 50000,
     "job_technologies": "Javascript, CSS",
-    "job_contact": "google.com"
+    "job_contact": "google.com",
+    "date_created": "10/8/21"
 
   },
   {
@@ -14,7 +15,8 @@
     "job_description": "Come work for Youtube as a Back End Developer!",
     "job_salary": 60000,
     "job_technologies": "SQL, Node",
-    "job_contact": "youtube.com"
+    "job_contact": "youtube.com",
+    "date_created": "10/8/21"
   
   },
   {
@@ -23,7 +25,8 @@
     "job_description": "Come work for Twitter as a Fullstack Developer!",
     "job_salary": 70000,
     "job_technologies": "SQL, Node, Javascript, CSS",
-    "job_contact": "twitter.com"
+    "job_contact": "twitter.com",
+    "date_created": "10/8/21"
   
   }
 ]
