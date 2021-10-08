@@ -13,11 +13,14 @@
     color: white;
     margin-left: 125px;
     font-family: 'Anton', sans-serif;
+  
 }
 
-body {
-    overflow: hidden; /* Hide scrollbars */
-  }
   ul, li {
     list-style-type: none;
   }
+
+#findJobsHeader{
+    background-color: #363636;
+    border-radius: 10px 10px;
+}
