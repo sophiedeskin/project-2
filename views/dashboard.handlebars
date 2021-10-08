@@ -1,8 +1,11 @@
-        <h1 class="title is-1 is-centered"  id="find-jobs-titles">Find Jobs</h1>
+<div class="columns is-centered mt-6">
+    <div class="column is-one-third" id="findJobsHeader">
+      <p class="title is-1 is-centered mb-4" class="bd-notification is-primary" id="titles">Find Jobs</p>
+      </div>
+      </div>
 {{#each jobs as |job| }}
 <div class="columns is-centered mt-6">
     <div class="column is-one-third">
-    <h2>
 <article class="message">
   <div class="message-header">
     <ul><li><p>{{job.job_title}}</p></li>
