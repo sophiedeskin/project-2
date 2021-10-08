@@ -20,7 +20,7 @@ res.render('signup');
 
 router.get('/addjob', async (req, res) => {
 res.render('addjob', {
-  layout: 'dashboard',
+  layout: 'addjob',
 });
 });
 
@@ -35,7 +35,7 @@ router.get('/editjob', async (req, res) => {
   //   });
   //   const jobs = dbJobData.map((job) => job.get({ plain: true }));
     res.render('editjob', {
-      layout: 'myjobspage'
+      layout: 'editjob'
     });
   // } catch (err) {
   //   console.log(err);
