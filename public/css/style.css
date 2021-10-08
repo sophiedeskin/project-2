@@ -9,10 +9,29 @@
     filter: blur() grayscale(65%);
 }
 
+#main-titles, #list-job-titles  {
+    color: white;
+    font-family: 'Anton', sans-serif;
+    padding-left: 90px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
 #titles {
     color: white;
     font-family: 'Anton', sans-serif;
-  
+    padding-left: 120px;
+    padding-top: auto;
+    padding-bottom: auto;
+}
+
+#list-job-titles {
+    padding-right: 25px;
+}
+
+#titles {
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
   ul, li {
@@ -24,7 +43,7 @@
     border-radius: 10px 10px;
 }
 
-#login, #signUp, #newJob{
+#main-titles, #signUp, #newJob, #list-job-titles, #titles{
     background-color: #363636;
     border-radius: 10px 10px;
 }
