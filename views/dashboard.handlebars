@@ -1,11 +1,12 @@
+<h1>Jobs Page</h1>
 {{#each jobs as |job| }}
 <div class="columns is-centered mt-6">
     <div class="column is-one-third">
     <h2>
 <article class="message">
   <div class="message-header">
-     <p><a href="/one-job/{{job.job_title}}">{{job.job_description}}</a></p>
-    <button class="add" aria-label="add"></button>
+     <p><a href="/one-job/{{job.job_title}}">{{job.job_title}}</a></p>
+   <button class="delete" aria-label="delete"></button>
   </div>
   <div class="message-body">
     </h2>
@@ -14,6 +15,8 @@
       {{job.job_company}};
       {{job.job_technology}}
     </p>
+   Job Description: {{job.job_description}}
+  </div>
 </article>
   </div>
 </div>
