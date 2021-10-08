@@ -1,6 +1,10 @@
 async function editFormHandler(event) {
     event.preventDefault();
   
+    if (event.target.hasAttribute('data-id')) {
+        const id = event.target.getAttribute('data-id');
+
+    
     const job_title = document.querySelector('input[name="job_title"]').value;
     const job_company = document.querySelector('input[name="job_company"]').value;
     const job_description = document.querySelector('input[name="job_description"]').value;
@@ -27,5 +31,5 @@ async function editFormHandler(event) {
         alert(response.statusText);
       }
   }
-  
+}
   document.querySelector('#create-post').addEventListener('click', editFormHandler);
