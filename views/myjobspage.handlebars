@@ -12,15 +12,16 @@
     <ul><li><p>{{job.job_title}}</p></li>
      <li><h1> {{job.job_company}}</h1></li>
      </ul>
-   <button class="delete" aria-label="delete"></button>
+   <button class="delete" aria-label="delete" id={{job.id}}></button>
   </div>
   <div class="message-body">
    <ul><li class="mb-3">Experience and Skills: {{job.job_technologies}}</li>
    <li class="mb-3"> Salary: ${{job.job_salary}}</li>
    <li class="mb-3">Job Description: {{job.job_description}}</li></ul>
-  <li class="mb-3"><a href="mailto:{{job.job_contact}}">Apply Here</a></li>
+  <li><a href="/editjob">Edit Job</a></li>
   </div>
 </article>
   </div>
 </div>
 {{/each}}
+<script src="/js/delete.js"></script>

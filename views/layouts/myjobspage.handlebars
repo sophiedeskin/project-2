@@ -21,11 +21,10 @@
       <div class="navbar-item">
   <div class="field is-grouped">
   {{#if logged_in}}
-  <a class="button mr-3" href ="/myjobspage">My Jobs</a>
+  <a class="button mr-3" href ="/dashboard">All Jobs</a>
   <a class="button mr-3" href ="/addjob">Create a Job</a>
-  <a class="button mr-3" id= "logout" href ="/">Logout</a>
+  <a class="button mr-3" id="logout" href ="/">Logout</a>
   {{else}}
-  <a class="button mr-3" href="/signup">Sign Up</a>
     {{/if}}
   </div>
 </div>
@@ -34,7 +33,6 @@
       </nav>
     {{!-- End Nav Bar --}}
 {{{body}}}
- <script src="./js/logout.js"></script>
 </body>
 </html>
  {{!-- <script src="./js/logout.js"></script> --}}
