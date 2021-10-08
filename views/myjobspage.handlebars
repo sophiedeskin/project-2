@@ -1,5 +1,5 @@
 <div class="columns is-centered mt-6">
-    <div class="column is-one-third ">
+    <div class="column is-one-third" id="jobs">
       <p class="title is-1 is-centered mb-6" class="bd-notification is-primary" id="myJobs">My Jobs</p>
       </div>
       </div>
@@ -17,7 +17,9 @@
   <div class="message-body">
    <ul><li class="mb-3">Experience and Skills: {{job.job_technologies}}</li>
    <li class="mb-3"> Salary: ${{job.job_salary}}</li>
-   <li class="mb-3">Job Description: {{job.job_description}}</li></ul>
+   <li class="mb-3">Job Description: {{job.job_description}}</li>
+    <li class="mb-3">Created on: {{job.date_created}}</li>
+   </ul>
   <li><a href="/editjob">Edit Job</a></li>
   </div>
 </article>
