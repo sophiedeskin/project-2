@@ -28,16 +28,7 @@ Job.init(
     job_contact: {
         type: DataTypes.STRING,
         allowNull: false,
-      },
-    // user_id: {
-    //   type: DataTypes.INTEGER,
-    //   // allowNull: false,
-    //   // defaultValue: 1,
-    //   references: {
-    //     model: "user",
-    //     key: "id",
-    //   },
-    // },
+      }
    
   },
   {

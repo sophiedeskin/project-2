@@ -64,7 +64,7 @@ router.post('/login', async (req, res) => {
     const dbUserData = await User.findOne({
       where: {
         email: req.body.email,
-        password: req.body.password,
+        // password: req.body.password,
       },
     });
 
@@ -85,6 +85,7 @@ router.post('/login', async (req, res) => {
     }
 
     req.session.save(() => {
+      req.session.email = dbUserData.email;
       req.session.user_id = dbUserData.id;
       req.session.logged_in = true;
       res
@@ -93,6 +94,7 @@ router.post('/login', async (req, res) => {
     });
   } catch (err) {
     console.log(err);
+    console.log("Log in failed")
     res.status(500).json(err);
   }
 });

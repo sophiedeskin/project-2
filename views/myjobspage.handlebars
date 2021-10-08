@@ -1,4 +1,4 @@
-<h1 class="title is-1 is-centered mb-6"  id="titles">Find Jobs</h1>
+<h1 class="title is-1 is-centered mb-6"  id="titles">Your Posted Jobs</h1>
 {{#each jobs as |job| }}
 <div class="columns is-centered mt-6">
     <div class="column is-one-third">
@@ -8,7 +8,7 @@
     <ul><li><p>{{job.job_title}}</p></li>
      <li><h1> {{job.job_company}}</h1></li>
      </ul>
-   <button class="delete" aria-label="delete"></button>
+   <button class="delete" aria-label="delete" id={{job.id}}></button>
   </div>
   <div class="message-body">
    <ul><li>Experience and Skills: {{job.job_technologies}}</li>
@@ -20,3 +20,4 @@
   </div>
 </div>
 {{/each}}
+<script src="/js/delete.js"></script>
