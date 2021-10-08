@@ -9,13 +9,8 @@ router.get('/', (req, res) => {
 });
 
 //signup route
-router.get('/signup', (req, res) => {
-// If the user is already logged in, redirect to the dashboard
-if (req.session.logged_in) {
-  res.redirect('dashboard');
-  return;
-}
-res.render('signup');
+router.get('/signup', async (req, res) => {
+  res.render('signup');
 });
 
 router.get('/addjob', async (req, res) => {
