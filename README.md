@@ -1,12 +1,10 @@
 # Project 2
 
 ## Description
-Coding Jobs is a site we have created to make it easier for the tech community to find and apply for jobs in thier field. It requires a login so that applicants can view job listings and buisnesses can post said listings, using bulma, handlebars, javascript, and some CSS we were able to bring this site to life.
+Coding Jobs is a site we have created to make it easier for the tech community to find and apply for jobs in their field. It requires a login so that applicants can view job listings and businesses can post said listings, using Bulma, Handlebars, Javascript, and some CSS we were able to bring this site to life.
 ## Table of Contents
 
 * [Technology](#technology)
-* [Installation](#installation)
-* [License](#license)
 * [Contributing](#contributing)
 * [Tests](#tests)
 * [Images](#images)
@@ -23,11 +21,7 @@ Coding Jobs is a site we have created to make it easier for the tech community t
 - Bulma
 - Bcrypt
 - Javascript
-
-## Installation
-
-
-## License
+- MVC
 
     
 ## Contributing

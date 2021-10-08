@@ -1,7 +1,7 @@
 // const jobid = document.querySelector(#)
 const deleteClickHandler = async function(event) {
   console.log("clicked")
-  console.log(event.target)
+  // console.log(event.target)
   const id = event.target.id
     await fetch(`/api/jobs/${id}`, {
       method: 'DELETE'

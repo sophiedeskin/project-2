@@ -1,8 +1,8 @@
 async function editFormHandler(event) {
     event.preventDefault();
-  
-    if (event.target.hasAttribute('data-id')) {
-        const id = event.target.getAttribute('data-id');
+    console.log("clicked")
+    console.log(event.target)
+    const id = event.target.id
 
     
     const job_title = document.querySelector('input[name="job_title"]').value;
@@ -11,9 +11,6 @@ async function editFormHandler(event) {
     const job_salary = document.querySelector('input[name="job_salary"]').value;
     const job_technologies = document.querySelector('input[name="job_technologies"]').value;
     const job_contact = document.querySelector('input[name="job_contact"]').value;
-    const id = window.location.toString().split('/')[
-        window.location.toString().split('/').length - 1
-      ];
 
       await fetch(`/api/jobs/${id}`, {
       method: 'PUT',
@@ -24,12 +21,7 @@ async function editFormHandler(event) {
             'Content-Type': 'application/json'
         }
       });
-      
-      if (response.ok) {
         document.location.replace('/myjobspage');
-      } else {
-        alert(response.statusText);
-      }
-  }
+  
 }
   document.querySelector('#create-post').addEventListener('click', editFormHandler);
